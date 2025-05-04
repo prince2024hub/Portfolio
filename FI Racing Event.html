@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Racing Event</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="Images/image13.png" alt="F1 Logo" class="logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero" id="home">
+        <h1 class="title">F1 Racing Championship 2025</h1>
+        <p class="subtitle">Experience the thrill, speed, and adrenaline like never before!</p>
+        <a href="#schedule" class="btn">View Schedule</a>
+    </header>
+    
+    <section id="schedule" class="schedule">
+        <h2>Race Schedule</h2>
+        <div class="event">
+            <h3>Grand Prix - Rishikesh </h3>
+            <p>Date: June 15, 2025</p>
+        </div>
+        <div class="event">
+            <h3>Grand Prix - Dehradun</h3>
+            <p>Date: July 3, 2025</p>
+        </div>
+    </section>
+    
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="image-container">
+            <img src="Images/image14.jpg" alt="F1 Car 1">
+            <img src="Images/image15.jpg" alt="F1 Car 2">
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@f1event.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Location: Rishikesh Grand Prix Venue</p>
+    </section>
+
+    <section id="video" class="video">
+        <h2>Experience the Thrill</h2>
+        <video width="80%" controls>
+            <source src="Images/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2025 F1 Racing Event. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            gsap.from(".navbar", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
+            gsap.from(".title", { duration: 1.5, y: -50, opacity: 0, ease: "bounce.out" });
+            gsap.from(".subtitle", { duration: 1.5, x: -100, opacity: 0, delay: 0.5 });
+            gsap.from(".btn", { duration: 1.5, scale: 0, opacity: 0, delay: 1 });
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0c0c0c;
+            color: white;
+            text-align: center;
+        }
+
+
+        .video {
+            padding: 50px 20px;
+            background: black;
+        }
+
+        .video h2 {
+            margin-bottom: 20px;
+        }
+
+        .video video {
+            border-radius: 10px;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            height: 50px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: red;
+        }
+
+        .hero {
+            background: url('Images/image16.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 70px;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: darkred;
+        }
+
+        .schedule, .gallery, .contact {
+            padding: 50px 20px;
+        }
+
+        .event {
+            background: rgba(255, 0, 0, 0.7);
+            padding: 15px;
+            margin: 10px auto;
+            width: 60%;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+            background: rgba(255, 0, 0, 0.9);
+        }
+
+        .image-container img {
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+    </style>
+</body>
+</html>

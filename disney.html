@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Magic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images/image8.png" alt="Disney" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#more-details">More Details</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="video-background">
+            <video autoplay loop muted>
+                <source src="Images/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="home-content">
+            <h2>Welcome to Disney Magic</h2>
+            <p>Discover the magical world of Disney characters, stories, and experiences.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="about-content">
+            <h2>About Disney</h2>
+            <p>Disney has been creating magic for over 90 years with iconic films, characters, and stories. Today, it encompasses various entertainment properties, including theme parks, studios, and streaming services, all known for their timeless characters and family-oriented content.</p>
+            <p>From its humble beginnings in animation to becoming a global entertainment giant, Disney has shaped the world of entertainment through films like *Snow White*, *The Lion King*, and the Marvel Cinematic Universe. Disney continues to bring joy, hope, and inspiration to millions worldwide.</p>
+        </div>
+    </section>
+
+    <section id="characters" class="section">
+        <div class="characters-content">
+            <h2>Meet the Characters</h2>
+            <p>Disney is home to a wide range of characters that have captured the hearts of audiences for decades. From the charming Mickey Mouse to the adventurous Elsa, explore these beloved personalities!</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="Images/image9.jpg" alt="Mickey Mouse">
+                    <h3>Mickey Mouse</h3>
+                    <p>Disney's most beloved character, Mickey is known for his optimism, adventurous spirit, and his iconic red shorts.</p>
+                </div>
+                <div class="card">
+                    <img src="Images/image10.jpg" alt="Donald Duck">
+                    <h3>Donald Duck</h3>
+                    <p>Known for his fiery temper and distinct voice, Donald brings humor and heart to Disney stories.</p>
+                </div>
+                <div class="card">
+                    <img src="Images/image11.jpg" alt="Goofy">
+                    <h3>Goofy</h3>
+                    <p>Clumsy but lovable, Goofy has been entertaining us with his goofy antics and positive attitude.</p>
+                </div>
+                <div class="card">
+                    <img src="Images/image12.jpg" alt="Elsa">
+                    <h3>Elsa</h3>
+                    <p>The Snow Queen from *Frozen*, Elsa's journey from fear to empowerment has resonated with fans around the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="testimonial-content">
+            <h2>What People Are Saying</h2>
+            <p>"Disney Magic is the best place to relive childhood memories!" - John Doe</p>
+            <p>"I’ve grown up watching Disney movies, and I still love the magic and wonder they create!" - Sarah Lee</p>
+            <p>"Disney represents the very best of imagination, creativity, and storytelling." - Michael Smith</p>
+            <div class="testimonial">
+                <p>"Disney's influence on my childhood and the entertainment industry cannot be overstated. It is truly magical!" - Emily Harris</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>If you want to learn more about Disney Magic, or just want to share your thoughts, feel free to reach out!</p>
+        </div>
+    </section>
+
+    <form action="submit_form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <section id="more-details" class="section">
+        <div class="more-details-content">
+            <h2>More About Disney Magic</h2>
+            <p>Disney Magic is not just about movies; it's about creating experiences, stories, and connections. Through theme parks, merchandise, and streaming platforms, Disney continues to impact generations. Learn more about Disney's legacy of innovation and its magical moments.</p>
+            <div class="more-details-buttons">
+                <button onclick="location.href='https://';">Learn About the Legacy</button>
+                <button onclick="location.href='https://';">Explore the Parks</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Disney Magic. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js">
+        // JavaScript for smooth scrolling on link click
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // JavaScript for sticky header color change on scroll
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+<style>
+    /* Reset some default styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* General Body Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to right, #3a7bd5, #00d2ff);
+        animation: gradientAnimation 5s ease infinite;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header Styles */
+    header {
+        background: rgba(3, 37, 65, 0.8);
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
+
+    header nav ul {
+        list-style-type: none;
+    }
+
+    header nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.3s ease-in-out;
+    }
+
+    header nav ul li a:hover {
+        color: #f1c40f;
+    }
+
+    /* Section Styles */
+    .section {
+        padding: 60px 20px;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .home-content,
+    .about-content,
+    .characters-content,
+    .contact-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Character Cards */
+    .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        width: 200px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+        margin-top: 15px;
+        color: #333;
+        font-size: 1.5em;
+    }
+
+    /* Footer Styles */
+    footer {
+        background: #03254c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* More Details Section */
+    #more-details {
+        background-color: #f9f9f9;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .more-details-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .more-details-content h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #03254c;
+    }
+
+    .more-details-content p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .more-details-buttons button {
+        background-color: #00d2ff;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.1em;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .more-details-buttons button:hover {
+        background-color: #3a7bd5;
+    }
+</style>
+
+</html>
